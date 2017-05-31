@@ -35,7 +35,7 @@ CassandraSession session = new CassandraSession.SessionBuilder(contactpoint)
 
 ### Write tests ###
 
-Example of a unit test, a live example can be seen ...
+Example of a Java Junit test using the [CassandraSession library](https://github.com/svenakela/Cassandra-Session)
 
 ```Java
 public class CassandraExecutorTest extends CassandraTestBase {
@@ -55,7 +55,8 @@ public class CassandraExecutorTest extends CassandraTestBase {
                 .andPreprocessPassword("cassandra")
                 .build();
 
-        session.getExecutor().execute(new SimpleStatement("create table testexecutor(id int primary key, test text)"));
+        session.getExecutor().execute(new SimpleStatement(
+                "create table testexecutor(id int primary key, test text)"));
     }
 
     @Test
@@ -63,9 +64,32 @@ public class CassandraExecutorTest extends CassandraTestBase {
 
         final CassandraExecutor exec = session.getExecutor();
 
-        assertEquals(0, exec.execute(new SimpleStatement("select * from testexecutor where id = 666")).all().size());
-        assertEquals(0,
-                exec.execute(new SimpleStatement("insert into testexecutor(id, test) values (1, 'x')")).all().size());
+        assertEquals(0, exec.execute(new SimpleStatement(
+                "select * from testexecutor where id = 666")).all().size());
+        assertEquals(0, exec.execute(new SimpleStatement(
+                "insert into testexecutor(id, test) values (1, 'x')")).all().size());
+    }
+}
+```
+
+Running a Groovy Spock test:
+
+```Groovy
+class VerifyKeyspaceTest extends Specification {
+
+    def 'verify that a cluster is created'() {
+
+        setup:
+        def cassandra = new CassandraTestBase()
+        def session = Cluster.builder()
+                .addContactPoint('localhost')
+                .withPort(cassandra.cassandraPort)
+                .build()
+                .connect()
+        when:
+        ResultSet rs = session.execute('select release_version from system.local')
+        then:
+        rs.one().getString('release_version') != ''
     }
 }
 ```
