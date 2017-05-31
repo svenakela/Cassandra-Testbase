@@ -16,7 +16,7 @@ Add the library as a test dependency and extend `CassandraTestBase` in your unit
 
 Add following to the build.gradle, with the latest version number:
 
-`testCompile('se.primenta.common:cassandra-testbase:+')`
+`testCompile('se.primenta.common:cassandra-test:+')`
 
 ### Connect ###
 
