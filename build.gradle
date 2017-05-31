@@ -1,5 +1,6 @@
 plugins {
   id 'groovy'
+  id 'eclipse'
 }
 
 group = 'se.primenta.common'
@@ -22,6 +23,7 @@ dependencies {
         'org.cassandraunit:cassandra-unit:+'
     )
     testCompile(
-        'org.spockframework:spock-core:1.1-groovy-2.4'
+        'org.spockframework:spock-core:1.1-groovy-2.4',
+        'com.datastax.cassandra:cassandra-driver-core:+'
     )
 }
