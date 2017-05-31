@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.util.NoSuchElementException;
 
 /**
- * Class for unit tests running without port conflict. Original port lookup stolen from Apache Camel.
+ * Class for unit tests running without port conflict. Original port lookup taken from Apache Camel.
  *
  * @author Sven Wesley
  *
