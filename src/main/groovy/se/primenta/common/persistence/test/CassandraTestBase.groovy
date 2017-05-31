@@ -5,7 +5,7 @@ import java.nio.file.Paths
 
 import org.cassandraunit.utils.EmbeddedCassandraServerHelper
 
-class CassandraTestBaseG {
+class CassandraTestBase {
 
     static int cassandraPort = 0;
 

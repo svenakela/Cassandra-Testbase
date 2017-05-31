@@ -7,7 +7,7 @@ class TestBaseTest extends Specification {
     def 'verify that a port is taken'() {
 
         when:
-        def testBase = new CassandraTestBaseG()
+        def testBase = new CassandraTestBase()
         then:
         testBase.cassandraPort != 0
     }
