@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/svenakela/Cassandra-Testbase.png)](https://travis-ci.org/svenakela/Cassandra-Testbase)
+
+
 # Cassandra Testbase #
 
 Library wrapping the [Cassandra Unit](https://github.com/jsevellec/cassandra-unit/wiki) framework and takes care of port and directory mapping automatically.
