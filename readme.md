@@ -1,5 +1,10 @@
 [![Build Status](https://travis-ci.org/svenakela/Cassandra-Testbase.png)](https://travis-ci.org/svenakela/Cassandra-Testbase)
 [![codecov.io](https://codecov.io/github/svenakela/Cassandra-Testbase/coverage.svg?branch=master)](https://codecov.io/github/svenakela/Cassandra-Testbase?branch=master)
+[![Release](https://jitpack.io/v/svenakela/Cassandra-Session.svg)](https://jitpack.io/#svenakela/Cassandra-Session)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
+[![forthebadge](http://forthebadge.com/badges/gluten-free.svg)](http://forthebadge.com)
+
 
 # Cassandra Testbase #
 
