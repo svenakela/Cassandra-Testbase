@@ -22,9 +22,22 @@ Add the library as a test dependency and extend `CassandraTestBase` in your unit
 
 ### Dependency ###
 
-Add following to the build.gradle, with the latest version number:
+Add following to the build.gradle:
 
-`testCompile('se.primenta.common:cassandra-test:+')`
+```Gradle
+repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    ...
+    compile 'com.github.svenakela:Cassandra-Testbase:+'
+}
+```
+
+Other [build tools examples can be found here](https://jitpack.io/#svenakela/Cassandra-Testbase).
+
 
 ### Connect ###
 
