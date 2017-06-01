@@ -1,4 +1,9 @@
 language: groovy
 jdk:
   - oraclejdk8
+script:
+  - ./gradlew check
+  - ./gradlew codeCoverageReport
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 

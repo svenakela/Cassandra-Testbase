@@ -1,6 +1,7 @@
 plugins {
   id 'groovy'
   id 'eclipse'
+  id 'jacoco'
 }
 
 group = 'se.primenta.common'
@@ -27,3 +28,11 @@ dependencies {
         'com.datastax.cassandra:cassandra-driver-core:+'
     )
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
