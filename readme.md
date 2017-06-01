@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/svenakela/Cassandra-Testbase.png)](https://travis-ci.org/svenakela/Cassandra-Testbase)
-[![Coverage Status](https://coveralls.io/repos/github/svenakela/Cassandra-Testbase/badge.svg?branch=master)](https://coveralls.io/github/svenakela/Cassandra-Testbase?branch=master)
 
 # Cassandra Testbase #
 
