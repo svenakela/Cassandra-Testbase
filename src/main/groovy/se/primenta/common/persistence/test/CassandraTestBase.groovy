@@ -22,7 +22,7 @@ class CassandraTestBase {
             return it
         }
 
-        EmbeddedCassandraServerHelper.startEmbeddedCassandra(file, System.properties.'java.io.tmpdir', 20000L);
+        EmbeddedCassandraServerHelper.startEmbeddedCassandra(file, System.properties.'java.io.tmpdir'+'/668', 20000L);
     }
 
     static def getStartDir() {
