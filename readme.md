@@ -13,8 +13,8 @@ Library wrapping the [Cassandra Unit](https://github.com/jsevellec/cassandra-uni
 ## Main Features ##
 
 * Creates an embedded Cassandra node for unit testing internally
-* Checks for open ports at startup
-* Runs the embedded instance within your build or target directory
+* Checks for open ports at startup and assigns automatically to the server
+* Runs the embedded instance under a unique temp folder, multiple builds can execute in parallel
 
 ## How to use ##
 
